@@ -3,19 +3,13 @@
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Feedback Form</title>
     <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css"
-        integrity="sha512-kJvtnExZlB0X0dncIHzgBNxvClL2QfHrJr0EgfgI3qZ+PKllQdOL6U9M9U+a+Oy8xvRzL6wSLJjmnOepAWk8pw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-kJvtnExZlB0X0dncIHzgBNxvClL2QfHrJr0EgfgI3qZ+PKllQdOL6U9M9U+a+Oy8xvRzL6wSLJjmnOepAWk8pw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Include your custom CSS -->
     <link rel="stylesheet" href="/static/custom.css">
-</head>
-
-<body>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         h1 {
             text-align: center;
@@ -29,10 +23,15 @@
             padding: 0 20px;
         }
 
-        
+        @media (max-width: 576px) {
+            .container {
+                max-width: 100%;
+            }
+        }
     </style>
+</head>
+<body>
     <div class="container">
-
         <h1>Help Us Improve to "Temple Data"</h1>
         <form method="post">
             <div class="form-group">
@@ -42,39 +41,27 @@
                 <p>{{ row.answer }}</p>
             </div>
             <div class="form-group">
-                <h4>Did you find this talking about TEMPLES ?</h4>
+                <h4>Did you find this talking about TEMPLES?</h4>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="feedback" id="yes" value="Yes" >
-                    <label class="form-check-label" for="yes">
-                        Yes
-                    </label>
+                    <input class="form-check-input" type="radio" name="feedback" id="yes" value="Yes">
+                    <label class="form-check-label" for="yes">Yes</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="feedback" id="no" value="No">
-                    <label class="form-check-label" for="no">
-                        No
-                    </label>
+                    <label class="form-check-label" for="no">No</label>
                 </div>
-
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="feedback" id="skip" value="Skip">
-                    <label class="form-check-label" for="skip">
-                        Skip this question
-                    </label>
+                    <label class="form-check-label" for="skip">Skip this question</label>
                 </div>
-                
             </div>
             <br>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </div>
-
         </form>
     </div>
     <!-- Include Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js"
-        integrity="sha512-qO1aHj3qDlSeN8O6O/5j5px5vOZ7Mn8+a+1C7SdS5xgXTm1W8J0KLzLb4pd4XZgsIKHtjcGh7Jsdn/UgNW+f5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.min.js" integrity="sha512-qO1aHj3qDlSeN8O6O/5j5px5vOZ7Mn8+a+1C7SdS5xgXTm1W8J0KLzLb4pd4XZgsIKHtjcGh7Jsdn/UgNW+f5w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-
 </html>
