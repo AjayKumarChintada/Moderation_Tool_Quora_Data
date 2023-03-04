@@ -56,6 +56,16 @@ def feedback():
             # print(sessions)
             rows = sessions[session['uuid']]['rows']
             row_index = session["row_index"]
+
+             # Check if the user clicked the "Skip" button
+            if feedback == 'Skip':
+                session["row_index"] += 1
+                if session["row_index"] < len(rows):
+                    return render_template("feedback.html", row=rows[session["row_index"]])
+                else:
+                    return "Thank you for your feedback!"
+                
+                
             rows[row_index][uuid_key] = feedback
             if rows[row_index][uuid_key] == 'Yes':
                 rows[row_index]['feedback_yes_count'] += 1
