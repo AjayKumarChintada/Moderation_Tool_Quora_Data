@@ -53,7 +53,7 @@ def feedback():
 
             feedback = request.form["feedback"]
             uuid_key = f"feedback_{session['uuid']}"
-            print(sessions)
+            # print(sessions)
             rows = sessions[session['uuid']]['rows']
             row_index = session["row_index"]
             rows[row_index][uuid_key] = feedback
